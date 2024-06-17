@@ -1,6 +1,6 @@
 # DEGEN TOKEN
 
-In this, we have to create a degen token and also use ```minting function```, ```transfer function```, ```burn functions``` and ```checkbalance functions```.
+In this, we have to create a degen token and also use ``` minting function```, ```transfer function```, ```burn functions``` and ```checkbalance functions```.
 
 ## Description
 
@@ -15,7 +15,7 @@ To run code, follow these steps:
 2. copy Degen.sol into remix and deploy.
 3. After deploying copy the address of contract and paste in contractAddress inside app.js, and copy abi and paste in contractABI inside same app.js.
 4. Now open index.html in browser and start interacting.
-```
+```javascript
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
