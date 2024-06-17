@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degen Token</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contain">
+        <header>
+        <h1>DEGEN TOKEN</h1>
+        </header>
+    </div>
+        <section>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Mint Token</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="mintAddress">
+                            <span class="icon"><i class="fas fa-address-book"></i></span> Recipient Address
+                        </label>
+                        <input type="text" id="mintAddress" placeholder="Enter recipient address">
+                    </div>
+                    <div class="input-group">
+                        <label for="mintAmount">
+                            <span class="icon"><i class="fas fa-coins"></i></span> Amount
+                        </label>
+                        <input type="number" id="mintAmount" placeholder="Enter amount">
+                    </div>
+                    <button onclick="mintTokens()" class="btn-primary">Mint Tokens</button>
+                </div>
+            </div>
+            
+        </section>
+        <section>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Transfer Tokens</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="transferAddress">
+                            <span class="icon"><i class="fas fa-address-book"></i></span> Recipient Address
+                        </label>
+                        <input type="text" id="transferAddress" placeholder="Enter recipient address">
+                    </div>
+                    <div class="input-group">
+                        <label for="transferAmount">
+                            <span class="icon"><i class="fas fa-coins"></i></span> Value
+                        </label>
+                        <input type="number" id="transferAmount" placeholder="Enter amount">
+                    </div>
+                    <button onclick="transferTokens()" class="btn-primary">Transfer</button>
+                </div>
+            </div>
+            
+        </section>
+        <section>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Burn Tokens</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="burnAmount">
+                            <span class="icon"><i class="fas fa-fire"></i></span> Amount
+                        </label>
+                        <input type="number" id="burnAmount" placeholder="Enter amount">
+                    </div>
+                    <button onclick="burnTokens()" class="btn-primary">Burn Tokens</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>Redeem Tokens</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="redeemAmount">
+                            <span class="icon"><i class="fas fa-coins"></i></span> Value
+                        </label>
+                        <input type="number" id="redeemAmount" placeholder="Enter amount">
+                    </div>
+                    <div class="input-group">
+                        <label for="redeemInput">
+                            <span class="icon"><i class="fas fa-exchange-alt"></i></span> Token Card
+                        </label>
+                        <select id="redeemInput">
+                            <option value="1">Token Card A</option>
+                            <option value="2">Token Card B</option>
+                            <option value="3">Token Card C</option>
+                            <option value="Unknown">Unknown token card</option>
+                        </select>
+                    </div>
+                    <button onclick="redeemTokens()" class="btn-primary">Redeem Tokens</button>
+                </div>
+            </div>
+            
+        </section>
+        <section>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Check Balance</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="balanceAddress">
+                            <span class="icon"><i class="fas fa-wallet"></i></span> Account address
+                        </label>
+                        <input type="text" id="balanceAddress" placeholder="Enter account ">
+                    </div>
+                    <button onclick="checkBalance()" class="btn-primary">Check Balance</button>
+                    <div id="balanceResult" class="Account"></div>
+                </div>
+            </div>
+            
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.5.2/dist/ethers.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+</body>
+</html>
