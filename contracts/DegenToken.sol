@@ -52,26 +52,31 @@ contract DegenToken is ERC20, Ownable {
         _burn(msg.sender, _value);
         }
 
-    function redeemTokens(uint256 _value, uint input) external returns (string memory) {
+    function redeemTokens(uint256 price, uint input) external returns (string memory) {
         
         Tokencards storage userCard = userCards[msg.sender];
-   
    if (input == 1) {
+price =100;
+ require(balanceOf(msg.sender) >= price, "You do not have enough tokens to redeem Item A");
     userCard.A++;
     } else if (input == 2) {
+price = 200;
+            require(balanceOf(msg.sender) >= price, "You do not have enough tokens to redeem Item B");
         userCard.B++;
-        } else if (input == 3) {  
+        } else if (input == 3) { 
+  price = 300;
+            require(balanceOf(msg.sender) >= price, "You do not have enough tokens to redeem Item C");
             userCard.C++;
         } else {
              return "Unknown token card";
              }
-        require(balanceOf(msg.sender) >= _value, "You do not have enough tokens to redeem");
+     //   require(balanceOf(msg.sender) >= _value, "You do not have enough tokens to redeem");
         
-        _burn(msg.sender, _value);
+        _burn(msg.sender, price);
 
         require(storeAddress != address(0), "Store address is not set");
 
-        emit TokensRedeemed(msg.sender, storeAddress, _value);
+        emit TokensRedeemed(msg.sender, storeAddress, price);
 
         return "Tokens redeemed successfully";
         }
